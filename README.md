@@ -1,6 +1,3 @@
-starter-kit
-===========
-
 A starter kit for Ember
 
 Your Ember.js project is almost ready! Here's how to get started:
@@ -30,7 +27,4 @@ For more information about ember-testing package see [ember-testing](http://embe
 
 For more information about the QUnit testing framework, see [QUnit](http://qunitjs.com/).
 
-Contact
-====
-
-[www.emberjs.com](http://www.emberjs.com)
+Nothing special here, just my personal site in ember JS, its a WIP and needs proper tooling setup with Ember CLI and NPM
