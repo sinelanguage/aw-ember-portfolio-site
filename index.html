@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta charset="utf-8">
+
+                <title>adam winick: multi-disciplined web, mobile/touch - designer/developer - creative technologist</title>
+
+                <script src="//use.typekit.net/xnk6tms.js"></script>
+                <script>try{Typekit.load();}catch(e){}</script>
+
+                <link rel="stylesheet" href="css/normalize.css">
+                <link rel="stylesheet" href="../liquid-fire-prebuild/liquid-fire-0.16.0.css">
+                <link rel="stylesheet" href="css/style.css">
+        </head>
+        <body>
+                <div class="spinn-bg"><div class="spinn">
+                        <div class="spinner-container">
+                                <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                                </svg>
+                        </div>
+                </div></div>
+                <script type="text/x-handlebars">
+                        <div class="viewport-container background-block">
+                                {{outlet}}
+                        </div>
+                </script>
+                <script type="text/x-handlebars" id="index">
+                        
+                        <div class="homepage-flex-wrap">
+                                <img class="homepage-logo" {{ bind-attr src=me.logoUrl }} width="300">
+                                <p class="name-desc">{{ me.name }}<span class="desc-divider"></span><span class="white-desc">{{ me.description }}</span></p>
+                                <p class="main-intro">{{ me.intro }}</p>
+                                <nav class="main-nav">
+                                        <ul>
+                                                <li class="with-divider">{{#link-to 'work'}}{{ me.homePageLinks.[1] }}{{/link-to}}</li>
+                                                <li class="inline-li">{{#link-to 'skills'}}{{ me.homePageLinks.[2] }}{{/link-to}}</li>
+                                        </ul>
+                                </nav>
+                        </div>
+                </script>
+                <script type="text/x-handlebars" id="skills">
+                        <div class="skills-flex-wrap">
+                                <header>
+                                        <p class="works-logo"><img src="assets/adamWinickLogo.svg" class="top-left-logo" width="190"><span class="inline-desc-divider"></span>Skills</p>
+                                        
+                                        <div class="menu-bar-wrap">
+                                                <span class="menu-bar"></span>
+                                                <span class="menu-bar"></span>
+                                                <span class="menu-bar"></span>
+                                        </div>
+                                </header>
+                                
+                                <section id="project">
+                                        <div class="project-text text-wrap">
+                                                <h2 class="skills-tagline">{{model.skillsTagline}}</h2>
+                                                <p class="skills-intro">{{model.skillsIntro}}</p>
+                                                {{#each item in model.skills}}
+                                                        <h2 class="skills-title">{{item.title}}</h2>
+                                                        {{#if item.info}}<p class="skills-info">{{ item.info }}</p>{{/if}}
+                                                        <ul class="skills-list-parent">
+                                                                {{#each skill in item.skillList}}
+                                                                <li class="skills-list">{{ skill }}</li>
+                                                                {{/each}}
+                                                        </ul>
+                                                {{/each}}
+                                        </div>
+                                </section>
+                                <footer class="footer-project">
+                                </footer>
+                        </div>
+                </script>
+                <script type="text/x-handlebars" id="work">
+                        <div class="work-flex-wrap">
+                                <header>
+                                        <p class="works-logo"><img src="assets/adamWinickLogo.svg" class="top-left-logo" width="190"><span class="inline-desc-divider"></span>Selected Works</p>
+                                        
+                                        <div class="menu-bar-wrap">
+                                                <span class="menu-bar"></span>
+                                                <span class="menu-bar"></span>
+                                                <span class="menu-bar"></span>
+                                        </div>
+                                </header>
+                                <section id="photos">
+                                        <div class="two-up">
+                                                <div class="img-wrap">
+                                                        <img class="grid-image" src="http://www.lorempixel.com/640/480/technics/1/" alt="pretty kitty">
+                                                        <div class="grid-image-overlay">
+                                                                <p class="project-name">Project Name</span></p>
+                                                                <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum, lectus a vehicula pellentesque, sem nisl fringilla ante, nec cursus enim quam accumsan eros. Duis vitae tincidunt est, in pulvinar velit.</p>
+                                                                <p class="project-tech-stack">Node / Express / Ember / GSAP</p>
+                                                                <a class="view-project" href="">View Project</a>
+                                                        </div>
+                                                </div>
+                                                <div class="img-wrap">
+                                                        <img class="grid-image" src="http://www.lorempixel.com/640/480/technics/2/" alt="pretty kitty">
+                                                        <div class="grid-image-overlay">
+                                                                <p class="project-name">Project Name</span></p>
+                                                                <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum, lectus a vehicula pellentesque, sem nisl fringilla ante, nec cursus enim quam accumsan eros. Duis vitae tincidunt est, in pulvinar velit.</p>
+                                                                <p class="project-tech-stack">Node / Express / Ember / GSAP</p>
+                                                                <a class="view-project" href="">View Project</a>
+                                                                
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="four-up">
+                                                <div class="img-wrap">
+                                                        <img class="grid-image" src="http://www.lorempixel.com/640/480/technics/3/" alt="pretty kitty">
+                                                        <div class="grid-image-overlay">
+                                                                <p class="project-name">Project Name</span></p>
+                                                                <p class="project-desc">iOS App</p>
+                                                                <p class="project-tech-stack">Node / Express / Ember / GSAP</p>
+                                                                <a class="view-project" href="">View Project</a>
+                                                        </div>
+                                                </div>
+                                                <div class="img-wrap">
+                                                        <img class="grid-image" src="http://www.lorempixel.com/640/480/technics/4/" alt="pretty kitty">
+                                                        <div class="grid-image-overlay">
+                                                                <p class="project-name">Project Name</span></p>
+                                                                <p class="project-desc">iOS App</p>
+                                                                <p class="project-tech-stack">Node / Express / Ember / GSAP</p>
+                                                                <a class="view-project" href="">View Project</a>
+                                                                
+                                                        </div>
+                                                </div>
+                                                <div class="img-wrap">
+                                                        <img class="grid-image" src="http://www.lorempixel.com/640/480/technics/5/" alt="pretty kitty">
+                                                        <div class="grid-image-overlay">
+                                                                <p class="project-name">Project Name</span></p>
+                                                                <p class="project-desc">iOS App</p>
+                                                                <p class="project-tech-stack">Node / Express / Ember / GSAP</p>
+                                                                <a class="view-project" href="">View Project</a>
+                                                                
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="two-up">
+                                                <div class="img-wrap">
+                                                        <img class="grid-image" src="http://www.lorempixel.com/640/480/technics/1/" alt="pretty kitty">
+                                                        <div class="grid-image-overlay">
+                                                                <p class="project-name">Project Name</span></p>
+                                                                <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum, lectus a vehicula pellentesque, sem nisl fringilla ante, nec cursus enim quam accumsan eros. Duis vitae tincidunt est, in pulvinar velit.</p>
+                                                                <p class="project-tech-stack">Node / Express / Ember / GSAP</p>
+                                                                <a class="view-project" href="">View Project</a>
+                                                                
+                                                        </div>
+                                                </div>
+                                                <div class="img-wrap">
+                                                        <img class="grid-image" src="http://www.lorempixel.com/640/480/technics/2/" alt="pretty kitty">
+                                                        <div class="grid-image-overlay">
+                                                                <p class="project-name">Project Name</span></p>
+                                                                <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut condimentum, lectus a vehicula pellentesque, sem nisl fringilla ante, nec cursus enim quam accumsan eros. Duis vitae tincidunt est, in pulvinar velit.</p>
+                                                                <p class="project-tech-stack">Node / Express / Ember / GSAP</p>
+                                                                <a class="view-project" href="">View Project</a>
+                                                                
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="four-up">
+                                                <div class="img-wrap">
+                                                        <img class="grid-image" src="http://www.lorempixel.com/640/480/technics/3/" alt="pretty kitty">
+                                                        <div class="grid-image-overlay">
+                                                                <p class="project-name">Project Name</span></p>
+                                                                <p class="project-desc">iOS App</p>
+                                                                <p class="project-tech-stack">Node / Express / Ember / GSAP</p>
+                                                                <a class="view-project" href="">View Project</a>
+                                                        </div>
+                                                </div>
+                                                <div class="img-wrap">
+                                                        <img class="grid-image" src="http://www.lorempixel.com/640/480/technics/4/" alt="pretty kitty">
+                                                        <div class="grid-image-overlay">
+                                                                <p class="project-name">Project Name</span></p>
+                                                                <p class="project-desc">iOS App</p>
+                                                                <p class="project-tech-stack">Node / Express / Ember / GSAP</p>
+                                                                <a class="view-project" href="">View Project</a>
+                                                                
+                                                        </div>
+                                                </div>
+                                                <div class="img-wrap">
+                                                        <img class="grid-image" src="http://www.lorempixel.com/640/480/technics/5/" alt="pretty kitty">
+                                                        <div class="grid-image-overlay">
+                                                                <p class="project-name">Project Name</span></p>
+                                                                <p class="project-desc">iOS App</p>
+                                                                <p class="project-tech-stack">Node / Express / Ember / GSAP</p>
+                                                                <a class="view-project" href="">View Project</a>
+                                                                
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </section>
+                                <footer class="footer-portfolio">
+                                        <p>Thank you for viewing my current selection of projects.  Feel free to go <a href="#/" class="footer-portfolio-link">back</a> and view my skills list</p>
+                                </footer>
+                        </div>
+                </script>
+                <script type="text/x-handlebars" id="project">
+                        <h1>{{projectName}}</h1>
+                        <h1>{{agency}}</h1>
+                        <p>{{#link-to 'work'}}Back to all projects{{/link-to}}</p>
+                </script>
+
+                <script src="js/libs/jquery-1.10.2.js"></script>
+                <script src="js/utils.js"></script>
+                <script src="js/libs/handlebars-v1.3.0.js"></script>
+                <script src="js/libs/ember-1.8.1.js"></script>
+                <script src="../liquid-fire-prebuild/velocity.js"></script>
+                <script src="../liquid-fire-prebuild/liquid-fire-0.16.0.js"></script>
+                <script src="js/app.js"></script>
+        </body>
+</html>
